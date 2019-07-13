@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './FormBuilder.css';
+import './FormSubmission.css';
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import Navbar from './Navbar.js';
@@ -54,12 +54,14 @@ export default class FormSubmission extends Component {
   };
   render() {
     return (
+      
       <div>
-        <Navbar title="Form Submission" />
 
+        <Navbar title="Form Submission" />
+        <Link to="/">back</Link>
         {this.state.submissionForms.map((oneForm, index) => {
           return (
-            <Card>
+            <div className="card1">
               {oneForm.map((oneField, i) => {
                 return (
                   <div>
@@ -67,10 +69,10 @@ export default class FormSubmission extends Component {
                   </div>
                 );
               })}
-            </Card>
+            </div>
           );
         })}
-        <Link to="/">back</Link>
+       
       </div>
     );
   }

@@ -41,7 +41,6 @@ export default class FormSubmit extends Component {
   //save the values of the fields
   postFormsSubmission = async e => {
     e.preventDefault();
-    console.log('postFormsSubmission');
     const obj = Object.values(this.state.values);
 
     this.setState({ arrayValues: obj });
@@ -56,7 +55,6 @@ export default class FormSubmit extends Component {
         body: JSON.stringify(obj),
       }
     );
-    console.log(this.state.arrayValues);
 
     if (response.status === 200) {
       this.setState({ values: {}, arrayValues: [] });
@@ -64,9 +62,7 @@ export default class FormSubmit extends Component {
       for (let index = 0; index < this.state.fieldInput.length; index++) {
         this.setState({ arrayValues: [...this.state.arrayValues, ''] });
       }
-      console.log(this.state.values, this.state.arrayValues);
 
-      console.log(this.state.values, this.state.arrayValues);
       console.log('added');
     } else {
       console.error('not added!');
