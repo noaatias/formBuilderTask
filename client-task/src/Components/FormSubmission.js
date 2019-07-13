@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './FormBuilder.css';
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
-import Navbar from './Navbar.jsx';
+import Navbar from './Navbar.js';
 
 export default class FormSubmission extends Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './FormBuilder.css';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar.jsx';
+import Navbar from './Navbar.js';
 
 export default class FormSubmit extends Component {
   constructor(props) {

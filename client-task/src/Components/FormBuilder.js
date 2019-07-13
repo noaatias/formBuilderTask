@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import './FormBuilder.css';
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
-import Navbar from './Navbar.jsx';
+import Navbar from './Navbar.js';
 
 export default class FormBuilder extends Component {
   constructor(props) {
@@ -17,7 +17,6 @@ export default class FormBuilder extends Component {
       type: '',
       fieldInput: [],
       field: [],
-
       formName: 'Form Name',
     };
   }
