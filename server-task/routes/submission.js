@@ -14,6 +14,7 @@ let pool;
     queueLimit: 0
   });
 })();
+// get all the  submissions 
 router.get("/", async (req, res) => {
   try {
     const [formSubmission] = await pool.execute(
@@ -29,6 +30,7 @@ router.get("/", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+// get all the  submissions of one form
 
 router.get("/:formID", async (req, res) => {
   if (!req.params.formID) {
@@ -46,6 +48,9 @@ router.get("/:formID", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+
+// post  the  submission 
+
 router.post("/:formID", async (req, res) => {
   if (!req.params.formID||!req.body) {
     res.status(500).send("noValid");
@@ -56,7 +61,6 @@ router.post("/:formID", async (req, res) => {
       `INSERT INTO FormBuilderTask.formSubmission (formID)  VALUES (?)`,
       [req.params.formID]
     );
-    console.log("resi2", resi2);
     const [resi1] = await pool.execute(
       `SELECT MAX(formSubmissionID) from  FormBuilderTask.formSubmission WHERE formID=?`,
       [req.params.formID]
@@ -67,9 +71,7 @@ router.post("/:formID", async (req, res) => {
       [req.params.formID]
     );
     for (let index = 0; index < resi.length; index++) {
-      console.log("value", req.body[index]);
 
-      console.log(resi1[0]["MAX(formSubmissionID)"]);
       if (req.body[index]) {
         await pool.execute(
           `INSERT INTO FormBuilderTask.formValues (formSubmissionID, fieldID, fieldValue) VALUES (?, ?,?)`,

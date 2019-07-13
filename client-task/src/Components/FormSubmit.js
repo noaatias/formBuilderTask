@@ -23,10 +23,11 @@ export default class FormSubmit extends Component {
   async componentDidMount() {
     await this.getFormField();
   }
-
+//update the state
   updateValueState = (event, i) => {
     this.state.values[i] = event.target.value;
   };
+  //get the field of one form
   getFormField = async e => {
     fetch(`http://localhost:5000/forms/${this.state.formID}`)
       .then(response => response.json())
@@ -37,6 +38,7 @@ export default class FormSubmit extends Component {
       })
       .catch(error => console.error(error));
   };
+  //save the values of the fields
   postFormsSubmission = async e => {
     e.preventDefault();
     console.log('postFormsSubmission');

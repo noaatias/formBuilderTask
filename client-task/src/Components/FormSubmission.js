@@ -18,9 +18,11 @@ export default class FormSubmission extends Component {
       newsubmissionFormId: [],
     };
   }
+  //show the submission one form 
   async componentDidMount() {
     await this.formsSubmissionFromServer();
   }
+  //get the submission one form 
 
   formsSubmissionFromServer = async e => {
     await fetch(`http://localhost:5000/submission/${this.state.formID}`)

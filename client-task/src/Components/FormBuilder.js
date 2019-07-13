@@ -20,7 +20,7 @@ export default class FormBuilder extends Component {
       formName: 'Form Name',
     };
   }
-
+//add fields to form
   handleFormSubmit = event => {
     event.preventDefault();
     let newField = (
@@ -43,6 +43,8 @@ export default class FormBuilder extends Component {
       ],
     });
   };
+    //create new form
+
   createForm = async e => {
     e.preventDefault();
     this.setState({
@@ -70,7 +72,7 @@ export default class FormBuilder extends Component {
       console.error('not added!');
     }
   };
-
+//update the fields state
   updatefieldLabelState(event) {
     this.setState({ fieldLabel: event.target.value });
   }

@@ -33,6 +33,7 @@ export default class FormList extends Component {
   componentDidMount() {
     this.allForms();
   }
+  //get all the forms
   allForms = async () => {
     await fetch(`http://localhost:5000/forms`)
       .then(response => response.json())
