@@ -1,4 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Download MySQL
+
+Download MySQL Workbench and in the connection insert the details :
+host: "localhost",
+user: "root",
+password: "123456"
 
 ## Available Scripts
 

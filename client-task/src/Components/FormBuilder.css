@@ -1,3 +1,19 @@
 .viewer{
-    text-align: -webkit-center;
+}
+
+.card{
+    width: 500px;
+    margin: auto;
+}
+.title{
+    font-size: 50px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.formName{
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }

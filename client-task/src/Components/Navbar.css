@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #76b852;
+    position: unset;
+    top: 0;
+    width: 100%;
+    background-image: url("https://i.pinimg.com/originals/6f/ed/ba/6fedba0fa00e45f4b4dc57c5333c3589.jpg");
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+
+}
+
+.title {
+    font-size: 20px;
+    color: white;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+
+}
